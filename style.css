@@ -775,6 +775,8 @@ a {
     max-width: 200px;
     margin: 0 auto;
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 @media (min-width: 768px) {
