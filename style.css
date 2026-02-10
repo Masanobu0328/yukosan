@@ -174,10 +174,10 @@ a {
 .btn--line {
     background-color: #06C755;
     color: white;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.85rem;
     box-shadow: var(--shadow-md);
-    flex-wrap: wrap;
+    white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -306,7 +306,7 @@ a {
 }
 
 .hero__title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.35;
     margin-bottom: var(--spacing-sm);
@@ -401,7 +401,7 @@ a {
 }
 
 .section__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.4;
 }
@@ -481,10 +481,11 @@ a {
 }
 
 .problem__card h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: var(--spacing-xs);
     color: var(--color-primary-dark);
     line-height: 1.4;
+    white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -611,10 +612,11 @@ a {
 }
 
 .solution__desc h4 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     margin-bottom: var(--spacing-xs);
     color: var(--color-primary-dark);
     line-height: 1.4;
+    white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -782,13 +784,7 @@ a {
 }
 
 .profile__content {
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .profile__content {
-        text-align: left;
-    }
+    text-align: left;
 }
 
 .profile__role {
@@ -886,10 +882,10 @@ a {
 }
 
 .offer__title {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     margin-bottom: var(--spacing-sm);
     color: var(--color-primary-dark);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 @media (min-width: 768px) {
