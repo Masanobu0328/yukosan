@@ -977,3 +977,26 @@ a {
     max-width: 100%;
     height: auto;
 }
+
+/* Mobile Text Optimization */
+@media (max-width: 767px) {
+    .text-nowrap-sp {
+        display: block;
+        white-space: nowrap;
+        font-size: 0.82rem;
+        /* Reduce font size to fit on one line */
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .offer__desc .text-nowrap-sp {
+        font-weight: 700;
+        color: var(--color-accent);
+        margin-top: 0.5rem;
+    }
+
+    .offer__note .text-nowrap-sp {
+        font-size: 0.75rem;
+    }
+}
