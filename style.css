@@ -194,14 +194,18 @@ a {
 }
 
 .btn--xl {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+    max-width: 100%;
 }
 
 @media (min-width: 768px) {
     .btn--xl {
         padding: 1.25rem 3rem;
         font-size: 1.25rem;
+        width: auto;
     }
 }
 
@@ -347,10 +351,10 @@ a {
 }
 
 .hero__subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-text-light);
     margin-bottom: var(--spacing-md);
-    line-height: 1.8;
+    line-height: 1.6;
     font-weight: 400;
 }
 
@@ -401,7 +405,7 @@ a {
 }
 
 .section__title {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
     line-height: 1.4;
 }
@@ -884,7 +888,7 @@ a {
 }
 
 .offer__title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-bottom: var(--spacing-sm);
     color: var(--color-primary-dark);
     line-height: 1.5;
