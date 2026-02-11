@@ -872,7 +872,7 @@ a {
 
 .offer__box {
     background-color: var(--color-white);
-    padding: var(--spacing-md) var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-xs);
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: var(--shadow-lg);
@@ -888,7 +888,7 @@ a {
 }
 
 .offer__title {
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin-bottom: var(--spacing-sm);
     color: var(--color-primary-dark);
     line-height: 1.5;
@@ -903,7 +903,7 @@ a {
 
 .offer__desc {
     margin-bottom: var(--spacing-md);
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     line-height: 1.7;
 }
 
