@@ -318,32 +318,34 @@
     </footer>
 
     <script>
-        // Prevent auto-scroll on load
+        // 1. Immediately strip hash and prevent browser auto-scroll
+        if (window.location.hash) {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
-
-        // Force scroll to top immediately and on load
         window.scrollTo(0, 0);
+
+        // 2. Also force top on DOMContentLoaded and load (belt and suspenders)
+        document.addEventListener('DOMContentLoaded', function () {
+            window.scrollTo(0, 0);
+        });
         window.addEventListener('load', function () {
             window.scrollTo(0, 0);
-            // If there's a hash, we might want to clear it or ignore it
-            // ensuring the user sees the hero section first
         });
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // 3. Smooth scroll for anchor links WITHOUT changing the URL hash
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
+                var targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
+                var targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
+                // Do NOT update location.hash — keeps URL clean for sharing
             });
         });
     </script>
