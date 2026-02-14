@@ -322,7 +322,30 @@
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
+
+        // Force scroll to top immediately and on load
         window.scrollTo(0, 0);
+        window.addEventListener('load', function () {
+            window.scrollTo(0, 0);
+            // If there's a hash, we might want to clear it or ignore it
+            // ensuring the user sees the hero section first
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 
